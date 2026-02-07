@@ -444,47 +444,104 @@ img {
 }
 
 
-/* ===== MOBILE NAV ===== */
-@media screen and (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 70%;
-        height: 100%;
-        background-color: var(--container-color);
-        padding: 6rem 2rem;
-        transition: right 0.3s;
-    }
+/* ========== RESPONSIVE ========== */
+@media screen and (max-width: 1024px) {
+  .home-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 
-    .show-menu {
-        right: 0;
-    }
-
-    .nav-list {
-        flex-direction: column;
-        row-gap: 2rem;
-    }
-
-    .nav-close {
-        display: block;
-        position: absolute;
-        top: 1.25rem;
-        right: 1.5rem;
-        font-size: 1.5rem;
-        cursor: pointer;
-    }
-
-    .nav-toggle {
-        display: block;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: var(--title-color);
-    }
+  .home-social {
+    grid-auto-flow: column;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
 }
 
-/* active link */
-.active-link {
-    color: var(--white-color);
-    font-weight: var(--font-semibold);
+@media screen and (max-width: 768px) {
+
+  /* NAVBAR */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    background-color: var(--body-color);
+    padding: 4rem 2rem;
+    transition: right 0.3s;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  .nav-close {
+    display: block;
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .nav-toggle {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--title-color);
+  }
+
+  .show-menu {
+    right: 0;
+  }
+
+  /* HOME */
+  .home-title {
+    font-size: 3rem;
+  }
+
+  /* INTRO */
+  .intro-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* EDUCATION */
+  .education-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* SKILLS */
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* HOBBY */
+  .hobby-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* CONTACT */
+  .contact-box {
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 1.25rem;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .home-title {
+    font-size: 2.5rem;
+  }
+
+  .section {
+    padding-block: 4rem 2.5rem;
+  }
+
+  .hobby-container {
+    grid-template-columns: 1fr;
+  }
 }
